@@ -16,5 +16,12 @@ pipeline {
                 echo " I am Stage three step"
             }
         }
+        stage ('four') {
+            steps {
+                sh '''echo hello world
+                echo hey
+                echo good moring'''
+            }
+        }
     }
 }
