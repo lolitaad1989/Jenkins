@@ -21,6 +21,7 @@ pipeline {
             steps {
                 echo " I am Stage one step"
                 echo "ENV URL is ${ENV_URL}"
+                sh "mvn clean"
             }
         }
         stage ('two') {
