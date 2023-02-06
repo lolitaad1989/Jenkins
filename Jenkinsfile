@@ -24,7 +24,7 @@ pipeline {
     stages {
         stage ('one') {
             when { 
-                branch 'devlop' 
+                branch 'main' 
             }
             steps {
                 echo " I am Stage one step"
