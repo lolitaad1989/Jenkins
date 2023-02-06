@@ -20,18 +20,12 @@ pipeline {
         maven 'mvn-387' 
     }
     stages {
-        stage('Example') {
-            steps {
-                sh 'mvn --version'
-            }
-        }
-    }
-    stages {
         stage ('one') {
             steps {
                 echo " I am Stage one step"
                 echo "ENV URL is ${ENV_URL}"
                 sh "mvn clean"
+                sh 'mvn --version'
             }
         }
         stage ('two') {
