@@ -30,6 +30,7 @@ pipeline {
                 echo " I am Stage one step"
                 echo "ENV URL is ${ENV_URL}"
                 sh 'mvn --version'
+                sh hostname
             }
         }
         stage ('two') {
