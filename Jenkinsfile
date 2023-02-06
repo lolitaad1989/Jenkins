@@ -17,7 +17,7 @@ pipeline {
         password(name: 'PASSWORD', defaultValue: 'SECRET', description: 'Enter a password')
     }
     tools {
-        maven 'apache-maven-3.0.1' 
+        maven 'mvn-387' 
     }
     stages {
         stage('Example') {
