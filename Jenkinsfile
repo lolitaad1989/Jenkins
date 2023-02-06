@@ -22,35 +22,39 @@ pipeline {
         maven 'mvn-387' 
     }
     stages {
-        stage ('one') {
-            steps {
-                echo " I am Stage one step"
-                echo "ENV URL is ${ENV_URL}"
-                sh 'mvn --version'
-                sh 'hostname'
-            }
-        }
-        stage ('two') {
-            environment {
-                ENV_URL = 'stage.global.com'
-            }
-            steps {
-                echo " I am Stage two step"
-                echo "ENV URL is ${ENV_URL}"
-            }
-        }
-        stage ('three') {
-            steps{
-                echo " I am Stage three step"
-            }
-        }
-        stage ('four') {
-            steps {
-                sh '''echo hello world
-                echo hey
-                echo good moring
-                env
-                '''
+        stage ('Parallel-stage') {
+            parallel {
+                stage ('one') {
+                    steps {
+                        echo " I am Stage one step"
+                        echo "ENV URL is ${ENV_URL}"
+                        sh 'mvn --version'
+                        sh 'hostname'
+                    }
+                }
+                stage ('two') {
+                    environment {
+                        ENV_URL = 'stage.global.com'
+                    }
+                    steps {
+                        echo " I am Stage two step"
+                        echo "ENV URL is ${ENV_URL}"
+                    }
+                }
+                stage ('three') {
+                    steps{
+                        echo " I am Stage three step"
+                    }
+                }
+                stage ('four') {
+                    steps {
+                        sh '''echo hello world
+                        echo hey
+                        echo good moring
+                        env
+                        '''
+                    }
+                }
             }
         }
     }
