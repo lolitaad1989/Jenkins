@@ -1,5 +1,7 @@
 pipeline {
-    agent any
+    agent {
+        label'ANSIBLE'
+    }
     environment {
         ENV_URL = 'pipleline.global.com'
         SSH_CRED = credentials('SSH_CRED')
