@@ -11,6 +11,9 @@ pipeline {
             }
         }
         stage ('two') {
+            environment {
+                ENV_URL = 'stage.global.com'
+            }
             steps {
                 echo " I am Stage two step"
             }
