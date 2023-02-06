@@ -2,6 +2,7 @@ pipeline {
     agent any
     environment {
         ENV_URL = 'pipleline.global.com'
+        SSH_CRED = credentials('SSH_CRED')
     }
     stages {
         stage ('one') {
@@ -28,7 +29,9 @@ pipeline {
             steps {
                 sh '''echo hello world
                 echo hey
-                echo good moring'''
+                echo good moring
+                env
+                '''
             }
         }
     }
