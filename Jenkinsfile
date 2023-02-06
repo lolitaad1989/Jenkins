@@ -23,9 +23,6 @@ pipeline {
     }
     stages {
         stage ('one') {
-            when { 
-                branch 'main' 
-            }
             steps {
                 echo " I am Stage one step"
                 echo "ENV URL is ${ENV_URL}"
