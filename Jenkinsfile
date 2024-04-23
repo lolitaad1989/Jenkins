@@ -13,7 +13,7 @@ pipeline {
     }
 
         tools {
-        maven 'apache-maven-3.9.1' 
+        maven 'mvn-391' 
     }
 
     // triggers { pollSCM('*/3 * * * *') }
