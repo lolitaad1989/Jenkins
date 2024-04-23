@@ -28,7 +28,7 @@ pipeline {
                 echo hai 
                 env '''
                 echo "ENV URL is ${ENV_URL}"
-                sh "sleep 300"
+                // sh "sleep 300"
             }
         }
         stage('two') {
