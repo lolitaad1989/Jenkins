@@ -14,11 +14,12 @@ pipeline {
             }
         }
         stage('two') {
+            environment {
+                ENV_URL = "wwww.amazn.com"
+            }
             steps {
                 echo "i am stage two"
-                environment {
-                    ENV_URL = "wwww.amazn.com"
-                }
+          
             }
         }
         stage('three') {
