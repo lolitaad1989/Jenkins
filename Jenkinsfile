@@ -7,7 +7,10 @@ pipeline {
     }
 
     options {
-        buildDiscarder(logRotator(numToKeepStr: '1')) }
+        buildDiscarder(logRotator(numToKeepStr: '1')) 
+        disableResume()
+        timeout(time: 1, unit: 'HOURS')
+    }
 
     stages {
         stage('one') {
@@ -17,6 +20,7 @@ pipeline {
                 echo hai 
                 env '''
                 echo "ENV URL is ${ENV_URL}"
+                sh "sleep 300"
             }
         }
         stage('two') {
