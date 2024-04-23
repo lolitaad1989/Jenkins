@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        ENV_URL = "wwww.google.com"
+        ENV_URL = "wwww.googldfsde.com"
         SSH_CRED = credentials('SSH_CRED')
     }
 
