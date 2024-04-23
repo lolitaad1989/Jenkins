@@ -12,6 +12,10 @@ pipeline {
         timeout(time: 1, unit: 'MINUTES')
     }
 
+        tools {
+        maven 'apache-maven-3.9.1' 
+    }
+
     // triggers { pollSCM('*/3 * * * *') }
 
     parameters {
@@ -30,6 +34,8 @@ pipeline {
                 echo hai 
                 env '''
                 echo "ENV URL is ${ENV_URL}"
+                sh "hostname"
+                sh "mvn --version"
                 // sh "sleep 300"
             }
         }
