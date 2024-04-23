@@ -9,7 +9,7 @@ pipeline {
     options {
         buildDiscarder(logRotator(numToKeepStr: '1')) 
         disableResume()
-        timeout(time: 1, unit: 'HOURS')
+        timeout(time: 1, unit: 'MINUTES')
     }
 
     stages {
