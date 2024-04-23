@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        ENV_URL = "wwww.flipkart.com"
+        ENV_URL = "wwww.flipkartbigbillion.com"
         SSH_CRED = credentials('SSH_CRED')
     }
 
@@ -12,7 +12,7 @@ pipeline {
         timeout(time: 1, unit: 'MINUTES')
     }
 
-    triggers { pollSCM('*/3 * * * *') }
+    // triggers { pollSCM('*/3 * * * *') }
 
     parameters {
         string(name: 'PERSON', defaultValue: 'Ms Lolita', description: 'Who should I say hello to?')
