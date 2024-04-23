@@ -10,7 +10,8 @@ pipeline {
             steps {
                 echo "i am stage one"
                 sh '''echo hello world
-                echo hai '''
+                echo hai 
+                env '''
                 echo "ENV URL is ${ENV_URL}"
             }
         }
