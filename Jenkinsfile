@@ -11,6 +11,7 @@ pipeline {
                 echo "i am stage one"
                 sh '''echo hello world
                 echo hai '''
+                echo "ENV URL is ${ENV_URL}"
             }
         }
         stage('two') {
