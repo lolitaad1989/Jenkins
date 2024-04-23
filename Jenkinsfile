@@ -12,6 +12,8 @@ pipeline {
         timeout(time: 1, unit: 'MINUTES')
     }
 
+    triggers { pollSCM('*/3 * * * *') }
+
     parameters {
         string(name: 'PERSON', defaultValue: 'Ms Lolita', description: 'Who should I say hello to?')
         text(name: 'BIOGRAPHY', defaultValue: '', description: 'Enter some information about the person')
