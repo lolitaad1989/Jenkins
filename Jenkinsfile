@@ -1,16 +1,21 @@
 pipeline {
-    agent ANSIBLE
+    agent any
 
     stages {
         stage('one') {
-            echo "i am stage one"
+            steps {
+                echo "i am stage one"
+            }
         }
         stage('two') {
-            echo "i am stage one"
+            steps {
+                echo "i am stage two"
+            }
         }
         stage('three') {
-            echo "i am stage one"
+            steps {
+                echo "i am stage two"
+            }
         }
     }
-
 }
