@@ -6,6 +6,11 @@ pipeline {
         SSH_CRED = credentials('SSH_CRED')
     }
 
+    options {
+        buildDiscarder(logRotator(numToKeepStr: '1')) }
+    }
+    ]
+
     stages {
         stage('one') {
             steps {
