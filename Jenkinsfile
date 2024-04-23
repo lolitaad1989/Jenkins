@@ -1,6 +1,10 @@
 pipeline {
     agent any
 
+    environment {
+        ENV_URL = "wwww.google.com"
+    }
+
     stages {
         stage('one') {
             steps {
@@ -12,6 +16,9 @@ pipeline {
         stage('two') {
             steps {
                 echo "i am stage two"
+                environment {
+                    ENV_URL = "wwww.amazn.com"
+                }
             }
         }
         stage('three') {
