@@ -9,7 +9,6 @@ pipeline {
     options {
         buildDiscarder(logRotator(numToKeepStr: '1')) }
     }
-    ]
 
     stages {
         stage('one') {
