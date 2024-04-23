@@ -22,12 +22,11 @@ pipeline {
             steps {
                 echo "i am stage two"
                 echo "ENV URL is ${ENV_URL}"
-                env
             }
         }
         stage('three') {
             steps {
-                echo "i am stage two"
+                echo "i am stage three"
             }
         }
     }
