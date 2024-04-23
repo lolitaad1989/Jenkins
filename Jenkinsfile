@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        ENV_URL = "wwww.flipkartbigbillion.com"
+        ENV_URL = "wwww.flipkartbigbillijjjjon.com"
         SSH_CRED = credentials('SSH_CRED')
     }
 
